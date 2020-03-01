@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 7034);
+app.set('port', 7035);
 
 
 app.get('/home', function(reg,res){
@@ -39,7 +39,7 @@ app.post('/home', function(reg,res){
     Obj.item = inputlist;
     Obj.bodylist = binputlist;
     Obj.met = "POST";
-    Obj.table = {"name":"Name","Value":"Value"};
+    Obj.table = {"Name":"Name","Value":"Value"};
    res.render('home',Obj);
 
 
