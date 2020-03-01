@@ -34,13 +34,12 @@ app.post('/home', function(reg,res){
     for(var i in reg.body){
         binputlist.push({'v3':i,'v4':reg.body[i]});
     }
-    console.log(inputlist);
-    console.log(binputlist);
-    console.log(reg.body);
+ 
     var Obj = {};
     Obj.item = inputlist;
     Obj.bodylist = binputlist;
     Obj.met = "POST";
+    Obj.table = {"name":"Name","Value":"Value"};
    res.render('home',Obj);
 
 
