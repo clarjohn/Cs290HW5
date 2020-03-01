@@ -12,7 +12,7 @@ app.set('view engine', 'handlebars');
 app.set('port', 7034);
 
 
-app.get('/hw5', function(reg,res){
+app.get('/', function(reg,res){
      var inputlist = [];
      for(var i in reg.query){
          inputlist.push() = {'v1':i,'v2':reg.query[i]};
