@@ -15,11 +15,12 @@ app.set('port', 7034);
 app.get('/', function(reg,res){
      var inputlist = [];
      for(var i in res.query){
-         inputlist.push() = {"v1":i,"v2":res.query[i]};
+         inputlist.push() = {'v1':i,'v2':res.query[i]};
      }
      var Obj = {};
      Obj.item = inputlist;
      Obj.met = "GET";
+     console.log(Obj);
     res.render('home',Obj);
 
 });
