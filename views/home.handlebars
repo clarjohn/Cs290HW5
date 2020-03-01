@@ -8,8 +8,8 @@
 
 <table>
   <thead>
-     <th>Name</th>
-     <th>Value</th>
+     <th id = "name"></th>
+     <th id = "value"></th>
   </thead>
   <tbody>
        {{#each bodylist}}
@@ -17,3 +17,10 @@
    {{/each}}
   </tbody>
 </table>
+
+<script>  
+   if(met == "POST"){
+   document.getElementById("name").textContent = 'Name';
+   document.getElementById("name").textContent = 'value';      
+   }
+</script>
