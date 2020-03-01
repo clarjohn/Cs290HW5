@@ -31,7 +31,7 @@ app.post('/home', function(reg,res){
         inputlist.push({'v1':i,'v2':reg.body[i]});
     }
     console.log(inputlist);
-    console.log(req.body);
+    console.log(reg.body);
     var Obj = {};
     Obj.item = inputlist;
     Obj.met = "POST";
