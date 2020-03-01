@@ -5,3 +5,15 @@
       <li>The name is: {{this.v1}}, and the value is: {{this.v2}}
    {{/each}}
 </ul>
+
+<table>
+  <thead>
+     <th>Name</th>
+     <th>Value</th>
+  </thead>
+  <tbody>
+       {{#each bodylist}}
+       <tr><td>this.v1</td> <td>this.v2</td></tr>
+   {{/each}}
+  </tbody>
+</table>

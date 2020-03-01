@@ -27,13 +27,19 @@ app.get('/home', function(reg,res){
 
 app.post('/home', function(reg,res){
     var inputlist = [];
+    for(var i in reg.query){
+        inputlist.push({'v1':i,'v2':reg.query[i]});
+    }
+    var binputlist = [];
     for(var i in reg.body){
-        inputlist.push({'v1':i,'v2':reg.body[i]});
+        binputlist.push({'v3':i,'v4':reg.body[i]});
     }
     console.log(inputlist);
+    console.log(binputlist);
     console.log(reg.body);
     var Obj = {};
     Obj.item = inputlist;
+    Obj.bodylist = binputlist;
     Obj.met = "POST";
    res.render('home',Obj);
 
