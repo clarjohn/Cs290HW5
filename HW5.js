@@ -25,6 +25,23 @@ app.get('/home', function(reg,res){
 });
 
 
+app.post('/home', function(reg,res){
+    var inputlist = [];
+    for(var i in reg.body){
+        inputlist.push({'v1':i,'v2':reg.body[i]});
+    }
+    console.log(inputlist);
+    console.log(req.body);
+    var Obj = {};
+    Obj.item = inputlist;
+    Obj.met = "POST";
+   res.render('home',Obj);
+
+
+});
+
+
+
 app.use(function(req,res){
     res.status(404);
     res.render('404');
