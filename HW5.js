@@ -17,10 +17,10 @@ app.get('/home', function(reg,res){
      for(var i in reg.query){
          inputlist.push() = {'v1':i,'v2':reg.query[i]};
      }
-     console.log(inputlist);
+    // console.log(inputlist);
      var Obj = {};
      Obj.item = inputlist;
-     Obj.met = "GET";
+    // Obj.met = "GET";
      console.log(Obj);
     res.render('home',Obj);
 
