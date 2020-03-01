@@ -12,10 +12,10 @@ app.set('view engine', 'handlebars');
 app.set('port', 7034);
 
 
-app.get('/', function(reg,res){
+app.get('/hw5', function(reg,res){
      var inputlist = [];
-     for(var i in res.query){
-         inputlist.push() = {'v1':i,'v2':res.query[i]};
+     for(var i in reg.query){
+         inputlist.push() = {'v1':i,'v2':reg.query[i]};
      }
      var Obj = {};
      Obj.item = inputlist;
@@ -24,11 +24,6 @@ app.get('/', function(reg,res){
     res.render('home',Obj);
 
 });
-
-
-
-
-
 
 
 app.use(function(req,res){
